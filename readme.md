@@ -2,7 +2,7 @@
 This repository contains implementation of vector dynamic time warping method. 
 This method computes optimal warping path between two signals by using vector distances. 
 
-![VDTW Distance](https://github.com/mustafateke/VDTW/blob/master/images/vectordistance.png)
+![VDTW Distance](images/vectordistance.png)
 
 ## Files
 VDTW.m: VDTW Matlab implementation
