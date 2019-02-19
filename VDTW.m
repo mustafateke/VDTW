@@ -7,26 +7,21 @@ function score = VDTW(x,y)
 
 r = length(x);
 c = length(y);
-psi = zeros(r,c); %distance matrix
-
+psi = zeros(r, c); %distance matrix
+d = zeros(r, c); % accumulated distance matrix.
 for m = 2:r
     for n = 2:c   
         psi(m,n)= acos(dot(x(m-1:m), y(n-1:n))/ (norm(x(m-1:m)) * norm(y(n-1:n))));
     end
 end
 
-d = psi; % accumulated distance matrix.
-
-
-for m= 3:r
+for m= 2:r
     d(m,2) = psi(m,2)+d(m-1,2);
 end
 
-for n= 3:c
+for n= 2:c
     d(2,n)= psi(2,n)+d(2,n-1);
 end
-
-
 
 for m = 3:r
     for n = 3:c
